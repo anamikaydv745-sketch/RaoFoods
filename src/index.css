@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+
+
+
+@keyframes spin-slow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
+
+
+@keyframes floatY {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.animate-floatY {
+  animation: floatY 4s ease-in-out infinite;
+}
+
+/* Left-Right */
+@keyframes floatX {
+  0%, 100% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(15px);
+  }
+}
+
+.animate-floatX {
+  animation: floatX 5s ease-in-out infinite;
+}
+
+/* Diagonal */
+@keyframes floatXY {
+  0%, 100% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(10px, -10px);
+  }
+}
+
+.animate-floatXY {
+  animation: floatXY 6s ease-in-out infinite;
+}
+
+
+.delay-1 { animation-delay: 1s; }
+.delay-2 { animation-delay: 2s; }
+.delay-3 { animation-delay: 3s; }
+
