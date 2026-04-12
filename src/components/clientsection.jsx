@@ -1,22 +1,43 @@
 import React from "react";
+import aksh from "../assets/aksh.png";
+import avsl from "../assets/avsl.png";
+import capstone from "../assets/capstone.png";
+import esic from "../assets/esic.png";
+import foxsun from "../assets/foxsun.png";
+import hipower from "../assets/hipower.png";
+import hitech from "../assets/hitech.png";
+import indica from "../assets/indica.png";
+import jkpaints from "../assets/jkpaints.png";
+import kei from "../assets/kei.png";
+import kesri from "../assets/kesri.png";
+import newcon from "../assets/newcon.png";
+import orientcables from "../assets/orientcables.png";
+import ral from "../assets/ral.png";
+import ratan from "../assets/ratan.png";
+import sbi from "../assets/sbi.png";
+import westerncontrol from "../assets/westerncontrol.png";
+
 
 export default function clientSection() {
   const logos = [
-    "/logos/pricol.png",
-    "/logos/ficm.png",
-    "/logos/sunbeam.png",
-    "/logos/frasle.png",
-    "/logos/krishna.png",
-    "/logos/msp.png",
-    "/logos/amom.png",
-    "/logos/spm.png",
-    "/logos/roop.png",
-    "/logos/lgb.png",
-    "/logos/cars24.png",
-    "/logos/ifb.png",
-    "/logos/wo.png",
-    
-  ];
+  aksh,
+  avsl,
+  capstone,
+  esic,
+  foxsun,
+  hipower,
+  hitech,
+  indica,
+  jkpaints,
+  kei,
+  kesri,
+  newcon,
+  orientcables,
+  ral,
+  ratan,
+  sbi,
+  westerncontrol
+];
 
   return (
     <section className="bg-gray-100 py-16 px-6 md:px-20">
@@ -41,7 +62,7 @@ export default function clientSection() {
             <img
               src={logo}
               alt={`client-${index}`}
-              className="h-12 object-contain grayscale hover:grayscale-0 transition duration-300"
+              className="h-12 object-contain  transition duration-300"
             />
           </div>
         ))}

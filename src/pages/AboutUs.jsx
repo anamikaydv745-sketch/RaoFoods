@@ -4,11 +4,13 @@ import Navbar from "../components/Navbar";
 import AboutCompany from "../components/AboutCompany";
 import AboutVisionMission from "../components/AboutVisionMission";
 import Footer from "../components/Footer";
+import Header from "../components/Header";
 
 
 function AboutUs() {
     return (
         <div>
+            <Header/>
             <Navbar/>
             <AboutHero/>
             <AboutCompany/>

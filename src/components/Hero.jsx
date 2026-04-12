@@ -10,7 +10,7 @@ import tomoto1 from "../assets/tomato.png";
 
 function Hero() {
     return(
-      <div className="w-full min-h-screen flex flex-col md:flex-row items-center justify-between px-6 md:px-10 bg-[#bcb28a] text-white relative overflow-hidden pt-[90px] md:pt-[110px]">
+      <div className="w-full min-h-screen flex flex-col md:flex-row items-center justify-between px-6 md:px-10 bg-[#bcb28a] text-white relative overflow-hidden pt-[120px] md:pt-[160px]">
 
              {/* 🔥 Left Content */}
              <div className="max-w-xl z-10">
@@ -39,7 +39,7 @@ function Hero() {
                </p>
                <img
          src={tomato}
-         className="absolute top-20 left-8 w-15 animate-floatY z-50"
+         className="absolute top-40 left-8 w-15 animate-floatY z-50"
        />
        
        <img

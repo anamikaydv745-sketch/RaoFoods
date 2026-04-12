@@ -1,6 +1,8 @@
 import react from "react";
 
 import companyimg from "../assets/companyimg.png";
+import ownerimg from "../assets/ownerimg.jpeg";
+
 
 function AboutCompany() {
   return (
@@ -26,13 +28,33 @@ function AboutCompany() {
           </div>
 
           {/* 🔥 Bottom Info Card */}
-          <div className="absolute -bottom-10 left-6 bg-[#bcb28a] text-black text-1xl p-6 rounded-lg shadow-lg max-w-sm">
-            <p className="text-sm leading-relaxed">
-              Devendra Kr. Yadav – Having more than 15 years of
-              industry experience – operating many industrial &
-              corporate units
-            </p>
-          </div>
+         <div className="absolute -bottom-10 left-6">
+  
+  {/* TEXT BOX */}
+  <div className="bg-[#bcb28a] text-black p-6 rounded-lg shadow-lg max-w-sm relative">
+    <p className="text-sm leading-relaxed">
+      Devendra Kr. Yadav – Having more than 15 years of
+      industry experience – operating many industrial &
+      corporate units
+    </p>
+
+    {/* IMAGE */}
+    <div className="
+      hidden md:block
+      absolute md:-right-27 top-1/2 -translate-y-1/2
+      w-30 h-30 md:w-38 md:h-38
+      rounded-full overflow-hidden border-4 border-white shadow-lg
+    ">
+      <img
+        src={ownerimg}
+        alt="founder"
+        className="w-full h-full object-cover"
+      />
+    </div>
+
+  </div>
+
+</div>
         </div>
 
         {/* 🔥 RIGHT CONTENT */}

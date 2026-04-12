@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import homelogo from "../assets/homelogo.png";
 import pgroom from "../assets/pgroom.png";
 import thaliya from "../assets/thaliya.png";
@@ -6,14 +6,46 @@ import img10 from "../assets/img10.png";
 import img11 from "../assets/img11.png";
 
 function welcome() {
+
+
+  const sectionRef = useRef(null);
+const [isVisible, setIsVisible] = useState(false);
+
+useEffect(() => {
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting) {
+        setIsVisible(true);
+      }
+    },
+    { threshold: 0.3 }
+  );
+
+  if (sectionRef.current) {
+    observer.observe(sectionRef.current);
+  }
+
+  return () => {
+    if (sectionRef.current) {
+      observer.unobserve(sectionRef.current);
+    }
+  };
+}, []);
+
+
     return(
-       <div className="w-full min-h-screen bg-[#f5f5f5] px-10 py-12 flex flex-col lg:flex-row gap-10">
+       <div 
+       ref={sectionRef}
+       className="w-full min-h-screen bg-[#f5f5f5] px-10 py-12 flex flex-col lg:flex-row gap-10">
        
              {/* LEFT CONTENT */}
-             <div className="flex-1">
+             <div
+  className={`flex-1 transition-all duration-1000 ease-out
+  ${isVisible ? "translate-x-0 opacity-100" : "-translate-x-20 opacity-0"}`}
+>
                
                {/* Heading */}
-               <p className="text-orange-500 text-2xl  font-semibold mb-2 flex items-center gap-2">
+               <p className="text-[#560416] text-2xl  font-semibold mb-2 flex items-center gap-2">
                  Welcome To
                 
                </p>
@@ -81,8 +113,10 @@ function welcome() {
              </div>
        
              {/* RIGHT IMAGE COLLAGE */}
-             <div className="flex-1 grid grid-cols-2 gap-4">
-               
+            <div
+  className={`flex-1 grid grid-cols-2 gap-4 transition-all duration-1000 ease-out
+  ${isVisible ? "translate-x-0 opacity-100" : "translate-x-20 opacity-0"}`}
+>
                <img
                  src={img10}
                  className="rounded-xl object-cover h-48 w-full"
