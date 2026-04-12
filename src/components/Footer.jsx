@@ -1,67 +1,99 @@
 import React from "react";
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
+import teleponecall from "../assets/telephonecall.png";
+import email from "../assets/email.png";
+import location from "../assets/location.png";
+import { Link } from "react-router-dom";
+
 
 const Footer = () => {
+
+    const socialIcons = [
+  { icon: FaFacebookF, link: "https://www.facebook.com/Raofoodservice/" },
+  { icon: FaInstagram, link: "https://www.instagram.com/raofoodservice?igsh=bjlhNnljeXRpdTBw" },
+ 
+];
   return (
-    <footer className="bg-[url('/images/footer-bg.jpg')] bg-cover bg-center relative text-white">
+    <footer className=" bg-cover bg-center relative text-white">
       
       {/* Overlay */}
-      <div className="absolute inset-0 bg-indigo-950/90"></div>
+      <div className="absolute inset-0 bg-[#bcb28a]"></div>
 
       <div className="relative max-w-7xl mx-auto px-6 py-12 grid md:grid-cols-3 gap-10">
 
         {/* Left Section */}
         <div>
-          <h2 className="text-2xl font-semibold text-orange-400 mb-4">
-            Kaanta Foods Private Limited
+          <h2 className="text-3xl font-bold text-[#560416] mb-4">
+            Rao Foods Private Limited
           </h2>
-          <p className="text-sm leading-6 text-gray-200">
+          <p className="text-l leading-6 text-white">
             Led by some of the best chefs in the industry, we create customized
             menus that cater to diverse tastes and dietary needs.
           </p>
 
           {/* Social Icons */}
-          <div className="flex gap-3 mt-6">
-            {["F", "I", "in", "T", "P"].map((icon, i) => (
-              <div
-                key={i}
-                className="w-9 h-9 flex items-center justify-center bg-orange-500 rounded-full cursor-pointer hover:scale-110 transition"
-              >
-                {icon}
-              </div>
-            ))}
-          </div>
+          
+
+
+
+<div className="flex gap-3 mt-6">
+  {socialIcons.map((item, i) => {
+    const Icon = item.icon;
+    return (
+      <a
+        key={i}
+        href={item.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="w-9 h-9 flex items-center justify-center bg-[#560416] text-white rounded-full cursor-pointer 
+        hover:scale-110 hover:bg-orange-500 transition duration-300"
+      >
+        <Icon />
+      </a>
+    );
+  })}
+</div>
         </div>
 
         {/* Middle Section */}
         <div>
-          <h3 className="text-lg font-semibold mb-4 border-b-2 border-orange-500 inline-block pb-1">
+          <h3 className="text-lg font-semibold mb-4 border-b-2 border-[#560416] inline-block pb-1">
             Short Link
           </h3>
           <ul className="space-y-3 text-sm">
-            <li className="hover:text-orange-400 cursor-pointer">About Us</li>
-            <li className="hover:text-orange-400 cursor-pointer">Services</li>
-            <li className="text-orange-400 cursor-pointer">Clients</li>
-            <li className="hover:text-orange-400 cursor-pointer">Testimonials</li>
+            <li className="hover:text-[#560416] cursor-pointer">
+              <Link to="/about">About</Link>
+            </li>
+            <li className="hover:text-[#560416] cursor-pointer">
+              <Link to="/services">Services</Link>
+            </li>
+            <li className="hover:text-[#560416] cursor-pointer">
+              <Link to="/clients">Clients</Link>
+            </li>
+            <li className="hover:text-[#560416] cursor-pointer">
+              <Link to="/contact">Contact</Link>
+            </li>
           </ul>
         </div>
 
         {/* Right Section */}
         <div>
-          <h3 className="text-lg font-semibold mb-4 border-b-2 border-orange-500 inline-block pb-1">
+          <h3 className="text-lg font-semibold mb-4 border-b-2 border-[#560416] inline-block pb-1">
             Contact Us
           </h3>
 
-          <div className="space-y-4 text-sm text-gray-200">
-            <p>📞 0124-4076616</p>
+          <div className="space-y-4 text-sm text-white">
+            <p><img src={teleponecall} alt="Phone" className="inline-block size-6 mr-2" /> 9785527941</p>
 
             <p>
-              ✉ pankaj.arora@kaantafoods.in <br />
-              sonu.arora@kaantafoods.in
+              <img src={email} alt="Email" className="inline-block size-6 mr-2" /> raofoodservice@gmail.com <br />
+             
             </p>
 
             <p>
-              📍 GB-2B, Ground Floor, Raheja Square, <br />
-              Sector-2, IMT Manesar, Gurugram
+              <img src={location} alt="Location" className="inline-block size-6 mr-2" /> 
+               Mohan Vihar Plot No.4, <br />
+               Bhiwadi , Rajasthan
             </p>
           </div>
         </div>
@@ -69,10 +101,10 @@ const Footer = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="bg-orange-500 text-center py-4 text-sm relative">
+      <div className="bg-[#560416] text-center py-4 text-sm relative">
         <p>
-          Copyright © Kaanta Foods Private Limited. All Rights Reserved |
-          Website designed by PGPS Web Solutions
+          Copyright @ Rao Foods Private Limited. All Rights Reserved |
+         
         </p>
       </div>
     </footer>

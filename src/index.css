@@ -63,3 +63,6 @@
 .delay-2 { animation-delay: 2s; }
 .delay-3 { animation-delay: 3s; }
 
+* {
+  user-select: none;
+}
