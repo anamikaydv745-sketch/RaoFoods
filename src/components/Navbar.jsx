@@ -11,15 +11,23 @@ function Navbar() {
 
     
     <div className="bg-[#bcb28a] relative z-50 ">
-    <nav className="w-[100%] fixed  top-[40px] md:top-[55px] h-22 bg-[#560416] shadow-md rounded-full px-8 py-4 flex items-center justify-between  z-50">
+    {/* <nav className="w-[100%] fixed  top-[40px] md:top-[55px] h-22 bg-[#560416] shadow-md rounded-full px-8 py-4 flex items-center justify-between  z-50"> */}
+
+    <nav className="w-full fixed top-[40px] md:top-[55px] h-[80px] bg-[#560416] shadow-md rounded-full px-4 md:px-8 flex items-center justify-between z-50 overflow-hidden">
       
       {/* Left Side - Logo/Text */}
       <div className="flex items-center gap-3 h-full">
-        <img 
+        {/* <img 
           src={raologo} 
           alt="Rao Foods Logo" 
           className="h-30 mt-4 w-auto object-contain"
-        />
+        /> */}
+
+        <img 
+  src={raologo} 
+  alt="Rao Foods Logo" 
+  className="h-[60px] md:h-[80px] object-contain"
+/>
        
       </div>
 

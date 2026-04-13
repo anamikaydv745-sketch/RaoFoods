@@ -10,8 +10,8 @@ import tomoto1 from "../assets/tomato.png";
 
 function Hero() {
     return(
-      <div className="w-full min-h-screen flex flex-col md:flex-row items-center justify-center md:justify-between px-6 md:px-10 bg-[#bcb28a] text-white relative overflow-hidden pt-[120px] md:pt-[160px]">
-
+      // <div className="w-full min-h-screen flex flex-col md:flex-row items-center justify-center md:justify-between px-6 md:px-10 bg-[#bcb28a] text-white relative overflow-hidden pt-[120px] md:pt-[160px]">
+<div className="w-full max-w-[100vw] min-h-screen flex flex-col md:flex-row items-center justify-center md:justify-between px-4 md:px-10 bg-[#bcb28a] text-white relative overflow-hidden pt-[120px] md:pt-[160px]">
              {/* 🔥 Left Content */}
              <div className="max-w-xl z-10">
                
@@ -31,21 +31,35 @@ function Hero() {
        
          <span className="relative inline-block">
            experience
-           <img
+           {/* <img
              src={dinner}
              className="absolute -bottom-9 -right-12 w-10 animate-floatY"
-           />
+           /> */}
+           <img
+  src={dinner}
+  className="absolute bottom-0 right-0 w-8 md:w-10 animate-floatY"
+/>
          </span>
                </p>
-               <img
+               {/* <img
          src={tomato}
          className="absolute top-40 left-8 w-15 animate-floatY z-50"
-       />
-       
+       /> */}
+
        <img
+  src={tomato}
+  className="absolute top-20 left-2 w-8 md:w-12 animate-floatY z-50"
+/>
+       
+       {/* <img
          src={design1}
          className="absolute -bottom-1 -right-1 w-15 animate-floatY z-50"
-       />
+       /> */}
+
+       <img
+  src={design1}
+  className="absolute bottom-0 right-0 w-8 md:w-12 animate-floatY z-50"
+/>
                
              </div>
        
@@ -68,7 +82,9 @@ function Hero() {
                />
        
                {/* 🔥 Logo Top Left */}
-               <div className="absolute top-0 left-0 -translate-x-1/3 -translate-y-1/3 w-110 h-110  rounded-full flex items-center justify-center  z-20">
+               {/* <div className="absolute top-0 left-0 -translate-x-1/3 -translate-y-1/3 w-110 h-110  rounded-full flex items-center justify-center  z-20"> */}
+
+               <div className="absolute top-2 left-2 w-[80px] h-[80px] md:w-[120px] md:h-[120px] rounded-full flex items-center justify-center z-20">
                  <img
                    src={raologo}
                    alt="logo"
