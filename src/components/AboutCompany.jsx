@@ -39,7 +39,7 @@ function AboutCompany() {
     </p>
 
     {/* IMAGE */}
-    <div className="
+    {/* <div className="
       hidden md:block
       absolute md:-right-27 top-1/2 -translate-y-1/2
       w-30 h-30 md:w-38 md:h-38
@@ -50,7 +50,20 @@ function AboutCompany() {
         alt="founder"
         className="w-full h-full object-cover"
       />
-    </div>
+    </div> */}
+
+    <div className="
+  absolute right-2 md:-right-10
+  top-1/2 -translate-y-1/2
+  w-20 h-20 md:w-38 md:h-38
+  rounded-full overflow-hidden border-4 border-white shadow-lg
+">
+  <img
+    src={ownerimg}
+    alt="founder"
+    className="w-full h-full object-cover"
+  />
+</div>
 
   </div>
 
