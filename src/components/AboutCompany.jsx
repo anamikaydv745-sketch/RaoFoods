@@ -32,7 +32,7 @@ function AboutCompany() {
   
   {/* TEXT BOX */}
   <div className="bg-[#bcb28a] text-black p-6  rounded-lg shadow-lg max-w-sm relative">
-    <p className="text-sm leading-relaxed">
+    <p className="text-sm pl-15 md:pl-30 font-bold leading-relaxed">
       Devendra Kr. Yadav – Having more than 15 years of
       industry experience – operating many industrial &
       corporate units
@@ -66,7 +66,7 @@ function AboutCompany() {
 </div> */}
 
 
-<div className="
+{/* <div className="
   absolute left-2 md:-left-10
   top-0 md:-top-30
   w-14 h-14 md:w-38 md:h-38
@@ -77,7 +77,22 @@ function AboutCompany() {
     alt="founder"
     className="w-full h-full object-cover"
   />
+</div> */}
+
+<div className="
+  absolute -top-12 left-0 md:-left-10 md:-top-10
+  w-[96px] h-[96px]     
+  md:w-[152px] md:h-[152px]  
+  rounded-full overflow-hidden border-4 border-white shadow-lg
+">
+  <img
+    src={ownerimg}
+    alt="founder"
+    className="w-full h-full object-cover"
+  />
 </div>
+
+
 
   </div>
 
