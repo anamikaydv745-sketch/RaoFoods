@@ -11,7 +11,7 @@ function Navbar() {
 
     
     <div className="bg-[#bcb28a] relative z-50 ">
-    <nav className="w-[100%] fixed overflow-hidden top-[40px] md:top-[55px] h-22 bg-[#560416] shadow-md rounded-full px-8 py-4 flex items-center justify-between  z-50">
+    <nav className="w-[100%] fixed  top-[40px] md:top-[55px] h-22 bg-[#560416] shadow-md rounded-full px-8 py-4 flex items-center justify-between  z-50">
       
       {/* Left Side - Logo/Text */}
       <div className="flex items-center gap-3 h-full">

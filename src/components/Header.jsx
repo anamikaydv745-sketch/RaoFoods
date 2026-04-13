@@ -11,7 +11,7 @@ export default function Header() {
 
 
   return (
-    <div className="w-full bg-[#bcb28a] text-white fixed top-0 left-0 z-[1000]">
+    <div className="w-full max-w-[100vw] bg-[#bcb28a] text-white fixed top-0 left-0 z-[1000]">
       <div className="flex items-center justify-between px-6 py-2">
         
         {/* Left Section */}
