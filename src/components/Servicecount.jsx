@@ -6,7 +6,7 @@ import { useInView } from "react-intersection-observer";
 
 function servicecount(){
     return(
-        <div className="relative w-full min-h-[500px] md:h-[500px] flex items-center justify-center">
+        <div className="relative w-full min-h-[500px] md:h-[500px] flex items-center overflow-hidden justify-center">
               
               {/* Background Image */}
               <img
